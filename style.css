@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+.hero {
+    background-image: linear-gradient(rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url('./images/hero.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh; 
+    position: relative; 
+    /* border: 1rem solid brown; */
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding-top: 10px;
+    z-index: 0;
+}
+.head, .menu{
+    z-index: 1;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.nav-items li {
+    list-style-type: none;
+    margin: 5px 5px;
+}
+.nav-item {
+    display: inline-block;
+}
+
+.logo, .nav-items, .btn {
+    float: left;
+    width: 33%;
+    /* position: sticky; */
+}
+.clearfix{
+    /* content: "";
+    display: block; */
+    clear: both;
+}
+.hero-desc {
+    width: 50%;
+  top : 50%;
+left : 50%;
+    position: absolute;
+   transform: translate(-50%, -50%);
+   z-index: -2;
+}
+.bttn {
+    border : 1px solid black;
+    border-radius: 1rem;
+   padding: 2px 15px;
+   margin: 0 5px;
+   background-color: black;
+   color: white;
+   cursor: pointer;
+
+}
+.bttn:hover{
+    opacity: 0.4;
+}
+#log {
+    background-color: transparent;
+  border: none;
+}
+
+.hero-desc p {
+    margin: 5px 0;
+    line-height: 1.2rem;
+}
+.nav-item:hover{
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+}
+.section{
+    background-color: rgb(239, 241, 247);
+    border: solid rgb(239, 241, 247);
+}
+section{
+    margin: 3.5rem 3rem 1rem 3rem ;
+}
+.sec-desc p{
+    margin-top: 0.5rem;
+    
+} 
+.annc{
+    margin: 0.8rem 0;
+}
+.fa-star , .fa-star-half-stroke{
+    color: rgb(230, 139, 20);
+    margin-bottom: 10px ;
+}
+.fa-bullhorn, .fa-location-dot{
+    
+    margin-right: 5px;
+}
+.card span{
+    font-size: smaller;
+    font-weight: bolder;
+    font-style: italic;
+}
+.card h4{
+    margin: 12px 0;
+}
+.fa-location-dot{
+    margin-bottom: 10px ;
+}
+.card{
+    width: 23%;
+    float: left;
+    margin: 0.3rem;
+    border-radius: 0.8rem;
+    
+}
+.card img{
+    height: 8rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.footer{
+    margin-top: 4rem;
+    text-align: center;
+}
+.footer .fa-solid ,.fa-brands{
+margin: 0.2rem 0.5rem;
+}
+.footer .fa-facebook-f, .fa-linkedin{
+    color: rgb(30, 30, 236);
+}
+.footer span{
+    font-weight: bolder;
+    font-style: italic;
+    margin-right: 5px;
+}
+.footer .fa-square-instagram{
+    color: red;
+}
+.menu {
+    display: none;
+    float: right;
+    margin-right: 1rem;
+}
+input[type="checkbox"] {
+    display: none;
+  }
+.menu-items{
+    display: none;
+      
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        padding: 4rem 2.5rem;
+        background-color: black;
+}
+.menu-item {
+    
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+.menu input[type="checkbox"]:checked ~ .menu-items {
+    display: block;
+    /* z-index: 0; */
+}
+.menu input[type="checkbox"]:checked ~ .menu-items .menu-item {
+    /* display: block; */
+    z-index: 1;
+}
+.menu input[type="checkbox"]:checked ~ label .fa-xmark {
+    display: block;
+    /* z-index: -1; */
+}
+.menu input[type="checkbox"]:checked  ~ label .fa-bars {
+    display: none;
+    /* z-index: -1; */
+}
+
+.menu li {
+    list-style-type: none;
+}
+.menu .fa-solid{
+  font-size: larger;
+}
+.menu .fa-xmark{
+    display: none;
+}
+.menu-item:hover {
+    color: orange;
+}
+
+@media (max-width:692px){
+     .nav-items , .btn {
+        display: none;
+     }
+     
+.menu {
+display: block;
+}
+.logo{
+    padding-left: 0.5rem;
+}
+.hero-desc{
+    width : 60%;
+    font-size: small;
+}
+
+
+}
+@media  (min-width: 371px) and (max-width: 692px)  {
+    .card{
+        width: 45%;
+    }
+    section{
+        margin: 3.5rem 1rem 1rem 1rem;
+    }   
+}
+@media (max-width:371px)  {
+    .card{
+        width: 100%;
+    } 
+    section{
+        margin: 3.5rem 1rem 1rem 1rem;
+    }
+}
